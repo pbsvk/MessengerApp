@@ -4,7 +4,7 @@
 //
 //  Created by Bhaskara Sai Vamsi Krishna Padala on 1/3/24.
 //
-//Getting Stared
+//Getting
 import SwiftUI
 
 struct ContentView: View {
@@ -13,7 +13,7 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Let's Get started !!")
         }
         .padding()
     }
