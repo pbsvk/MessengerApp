@@ -11,6 +11,7 @@
 		CB2D1FEC2B45E50100B88648 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2D1FEB2B45E50100B88648 /* ContentView.swift */; };
 		CB2D1FEE2B45E50300B88648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2D1FED2B45E50300B88648 /* Assets.xcassets */; };
 		CB2D1FF12B45E50300B88648 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2D1FF02B45E50300B88648 /* Preview Assets.xcassets */; };
+		CBD411162B46FFF300F15F20 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD411152B46FFF300F15F20 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		CB2D1FEB2B45E50100B88648 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB2D1FED2B45E50300B88648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB2D1FF02B45E50300B88648 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CBD411152B46FFF300F15F20 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,12 @@
 		CB2D1FE82B45E50100B88648 /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
-				CB2D1FE92B45E50100B88648 /* MessengerApp.swift */,
-				CB2D1FEB2B45E50100B88648 /* ContentView.swift */,
+				CBD4110D2B46FF2500F15F20 /* App */,
+				CBD411112B46FF4C00F15F20 /* Extensions */,
+				CBD4110E2B46FF3200F15F20 /* Core */,
+				CBD411102B46FF4300F15F20 /* Service */,
+				CBD411132B46FFB600F15F20 /* Root */,
+				CBD4110F2B46FF3800F15F20 /* Model */,
 				CB2D1FED2B45E50300B88648 /* Assets.xcassets */,
 				CB2D1FEF2B45E50300B88648 /* Preview Content */,
 			);
@@ -65,6 +71,67 @@
 				CB2D1FF02B45E50300B88648 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CBD4110D2B46FF2500F15F20 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CB2D1FE92B45E50100B88648 /* MessengerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CBD4110E2B46FF3200F15F20 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CBD411122B46FF6200F15F20 /* Authentication */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CBD4110F2B46FF3800F15F20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CBD411102B46FF4300F15F20 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CBD411112B46FF4C00F15F20 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CBD411122B46FF6200F15F20 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CBD411142B46FFE000F15F20 /* View */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		CBD411132B46FFB600F15F20 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				CB2D1FEB2B45E50100B88648 /* ContentView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		CBD411142B46FFE000F15F20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CBD411152B46FFF300F15F20 /* LoginView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD411162B46FFF300F15F20 /* LoginView.swift in Sources */,
 				CB2D1FEC2B45E50100B88648 /* ContentView.swift in Sources */,
 				CB2D1FEA2B45E50100B88648 /* MessengerApp.swift in Sources */,
 			);
