@@ -100,7 +100,9 @@ struct LoginView: View {
                 //signup link
                 Divider()
                 NavigationLink {
-                    Text("Sign Up View")
+                    SignUpView()
+                    
+
                 }
             label:{
                 HStack(spacing : 3){
