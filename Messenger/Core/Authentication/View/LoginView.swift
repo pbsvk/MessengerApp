@@ -27,12 +27,14 @@ struct LoginView: View {
                 let skyBlue = Color(red: 0.4627, green: 0.8392, blue: 1.0)
                 VStack(spacing: 10){
                     TextField("Email ID", text: $email)
+                        .autocapitalization(.none) // Disable autocapitalization to handle it manually
                         .font(.subheadline)
                         .padding(12)
                         .background(Color(skyBlue))
                         .cornerRadius(20)
                         .padding(.horizontal, 24)
                     SecureField("Password", text: $password)
+                        .autocapitalization(.none)
                         .font(.subheadline)
                         .padding(12)
                         .background(Color(skyBlue))
@@ -101,6 +103,7 @@ struct LoginView: View {
                 Divider()
                 NavigationLink {
                     SignUpView()
+                        .navigationBarBackButtonHidden(true)
                     
 
                 }
@@ -117,7 +120,6 @@ struct LoginView: View {
         }
     }
 }
-
 struct Login_View_Previews: PreviewProvider{
     static var previews: some View{
         LoginView()

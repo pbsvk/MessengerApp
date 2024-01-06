@@ -40,6 +40,7 @@ struct SignUpView: View {
                         .cornerRadius(30)
                         .padding(.horizontal, 24)
                     TextField("Email ID", text: $email)
+                        .autocapitalization(.none)
                         .font(.subheadline)
                         .padding(12)
                         .background(Color(.systemGray6))
@@ -47,6 +48,7 @@ struct SignUpView: View {
                         .cornerRadius(30)
                         .padding(.horizontal, 24)
                     SecureField("Password", text: $password)
+                        .autocapitalization(.none)
                         .font(.subheadline)
                         .padding(12)
                         .background(Color(.systemGray6))
@@ -54,6 +56,7 @@ struct SignUpView: View {
                         .cornerRadius(30)
                         .padding(.horizontal, 24)
                     TextField("Phone", text : $phone)
+                        .keyboardType(.numberPad)
                         .font(.subheadline)
                         .padding(12)
                         .background(Color(.systemGray6))
@@ -67,8 +70,9 @@ struct SignUpView: View {
                 //Already have an account? SIgnin
               
                 
-                Button{
-                    dismiss()
+                NavigationLink {
+                    LoginView()
+                        .navigationBarBackButtonHidden(true)
                     
                 } label : {
                     Text("Already have an account? Login")
