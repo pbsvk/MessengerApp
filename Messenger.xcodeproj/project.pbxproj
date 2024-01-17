@@ -18,6 +18,7 @@
 		CBD411162B46FFF300F15F20 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD411152B46FFF300F15F20 /* LoginView.swift */; };
 		CBD9862C2B48B43600013A54 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9862B2B48B43600013A54 /* SignUpView.swift */; };
 		CBFD76602B5846610093A078 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD765F2B5846610093A078 /* ProfileView.swift */; };
+		CBFD76622B58596B0093A078 /* SettingsOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD76612B58596B0093A078 /* SettingsOptionsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		CBD411152B46FFF300F15F20 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CBD9862B2B48B43600013A54 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		CBFD765F2B5846610093A078 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CBFD76612B58596B0093A078 /* SettingsOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 		CBFD765D2B5846400093A078 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CBFD76612B58596B0093A078 /* SettingsOptionsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				CB285C8D2B4AEF5500D49E72 /* InboxView.swift in Sources */,
 				CB285C902B4AF1E000D49E72 /* ActiveNowView.swift in Sources */,
 				CB2D1FEC2B45E50100B88648 /* ContentView.swift in Sources */,
+				CBFD76622B58596B0093A078 /* SettingsOptionsViewModel.swift in Sources */,
 				CB2D1FEA2B45E50100B88648 /* MessengerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
