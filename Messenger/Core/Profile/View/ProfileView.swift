@@ -6,21 +6,38 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ProfileView: View {
+        @StateObject var viewModel = ProfileViewModel()
     var body: some View {
         VStack {
             //header
             VStack{
-                Image(systemName: "person.circle.fill")
-                    .resizable()
-                    .frame(width: 80, height: 80)
-                    .foregroundColor(Color(.systemGray))
+                PhotosPicker(selection: $viewModel.selectedItem) {
+                    if let profileImage = viewModel.profileImage{
+                        profileImage
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 80, height: 80)
+                            .clipShape(Circle())
+                    }else {
+                        Image(systemName: "person.circle.fill")
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                            .foregroundColor(Color(.systemGray))
+                    }
+                }
                 
-                Text("Vamsi")
+                Text("Chris")
                     .font(.title)
                     .fontWeight(.semibold)
-                
+            }
+            .onChange(of: viewModel.selectedItem) { newItem, _ in
+                if newItem == nil {
+                    // Only update the profile image if a new item is selected
+                    viewModel.clearProfileImage()
+                }
             }
             //list
             List{
