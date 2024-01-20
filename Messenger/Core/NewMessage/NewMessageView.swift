@@ -15,6 +15,7 @@ struct NewMessageView: View {
         NavigationStack {
             ScrollView{
                 TextField("To: ", text: $searchText)
+                    .autocapitalization(.none) 
                     .frame(height: 44)
                     .padding(.leading)
                     .background(Color(.systemGroupedBackground))
