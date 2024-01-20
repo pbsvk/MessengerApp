@@ -18,6 +18,7 @@
 		CB9385442B5C0DB900F6C673 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9385432B5C0DB900F6C673 /* ProfileViewModel.swift */; };
 		CBD411162B46FFF300F15F20 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD411152B46FFF300F15F20 /* LoginView.swift */; };
 		CBD9862C2B48B43600013A54 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9862B2B48B43600013A54 /* SignUpView.swift */; };
+		CBE487AB2B5C79FB0016455B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE487AA2B5C79FB0016455B /* User.swift */; };
 		CBFD76602B5846610093A078 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD765F2B5846610093A078 /* ProfileView.swift */; };
 		CBFD76622B58596B0093A078 /* SettingsOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD76612B58596B0093A078 /* SettingsOptionsViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		CB9385432B5C0DB900F6C673 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CBD411152B46FFF300F15F20 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CBD9862B2B48B43600013A54 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		CBE487AA2B5C79FB0016455B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CBFD765F2B5846610093A078 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CBFD76612B58596B0093A078 /* SettingsOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 		CBD4110F2B46FF3800F15F20 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CBE487AA2B5C79FB0016455B /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				CB285C8D2B4AEF5500D49E72 /* InboxView.swift in Sources */,
 				CB285C902B4AF1E000D49E72 /* ActiveNowView.swift in Sources */,
 				CB9385442B5C0DB900F6C673 /* ProfileViewModel.swift in Sources */,
+				CBE487AB2B5C79FB0016455B /* User.swift in Sources */,
 				CB2D1FEC2B45E50100B88648 /* ContentView.swift in Sources */,
 				CBFD76622B58596B0093A078 /* SettingsOptionsViewModel.swift in Sources */,
 				CB2D1FEA2B45E50100B88648 /* MessengerApp.swift in Sources */,

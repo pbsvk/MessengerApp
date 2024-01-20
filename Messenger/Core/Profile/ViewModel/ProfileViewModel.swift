@@ -24,9 +24,5 @@ class ProfileViewModel: ObservableObject {
         self.profileImage = Image(uiImage: uiImage)
     }
     
-    // Method to clear the profile image
-    func clearProfileImage() {
-        self.profileImage = nil
-    }
 }
 

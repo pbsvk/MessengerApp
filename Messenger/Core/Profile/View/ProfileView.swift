@@ -9,45 +9,55 @@ import SwiftUI
 import PhotosUI
 
 struct ProfileView: View {
-        @StateObject var viewModel = ProfileViewModel()
+    @StateObject var viewModel = ProfileViewModel()
+    let user: User
+    
     var body: some View {
         VStack {
-            //header
-            VStack{
+            // header
+            VStack {
                 PhotosPicker(selection: $viewModel.selectedItem) {
-                    if let profileImage = viewModel.profileImage{
+                    if let profileImage = viewModel.profileImage {
                         profileImage
                             .resizable()
                             .scaledToFill()
                             .frame(width: 80, height: 80)
                             .clipShape(Circle())
-                    }else {
-                        Image(systemName: "person.circle.fill")
-                            .resizable()
-                            .frame(width: 80, height: 80)
-                            .foregroundColor(Color(.systemGray))
+                    } else {
+                        if let imageUrl = user.profileImageUrl,
+                           let url = URL(string: imageUrl),
+                           let data = try? Data(contentsOf: url),
+                           let uiImage = UIImage(data: data) {
+                            Image(uiImage: uiImage)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 80, height: 80)
+                                .clipShape(Circle())
+                        } else {
+                            Image(user.profileImageUrl ?? "")
+                                                       .resizable()
+                                                       .scaledToFill()
+                                                       .frame(width: 80, height: 80)
+                                                       .clipShape(Circle())
+                        }
                     }
                 }
                 
-                Text("Chris")
+                Text(user.fullName)
                     .font(.title)
                     .fontWeight(.semibold)
             }
-            .onChange(of: viewModel.selectedItem) { newItem, _ in
-                if newItem == nil {
-                    // Only update the profile image if a new item is selected
-                    viewModel.clearProfileImage()
-                }
-            }
-            //list
-            List{
+            
+            // list
+            List {
                 Section {
-                    ForEach(SettingsOptionsViewModel.allCases) { option in HStack{
-                        Image(systemName: option.imageName)
+                    ForEach(SettingsOptionsViewModel.allCases) { option in
+                        HStack {
+                            Image(systemName: option.imageName)
                                 .resizable()
                                 .frame(width: 18, height: 18)
                                 .foregroundColor(option.imageBackgroundColor)
-                           
+                            
                             Text(option.title)
                                 .font(.subheadline)
                         }
@@ -68,5 +78,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(user:User.TEST_USER)
 }
