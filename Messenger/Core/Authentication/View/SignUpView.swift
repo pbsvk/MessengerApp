@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @State private var email = ""
-    @State private var password = ""
-    @State private var name = ""
-    @State private var phone = ""
+    @StateObject var viewModel = RegistrationViewModel()
     @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationStack{
@@ -32,14 +29,14 @@ struct SignUpView: View {
             
                 
                 VStack(spacing: 10){
-                    TextField("Name", text: $name)
+                    TextField("Name", text: $viewModel.fullname)
                         .font(.subheadline)
                         .padding(12)
                         .background(Color(.systemGray6))
                         .frame(width:350, height:30)
                         .cornerRadius(30)
                         .padding(.horizontal, 24)
-                    TextField("Email ID", text: $email)
+                    TextField("Email ID", text: $viewModel.email)
                         .autocapitalization(.none)
                         .font(.subheadline)
                         .padding(12)
@@ -47,7 +44,7 @@ struct SignUpView: View {
                         .frame(width:350, height:30)
                         .cornerRadius(30)
                         .padding(.horizontal, 24)
-                    SecureField("Password", text: $password)
+                    SecureField("Password", text: $viewModel.password)
                         .autocapitalization(.none)
                         .font(.subheadline)
                         .padding(12)
@@ -55,7 +52,7 @@ struct SignUpView: View {
                         .frame(width:350, height:30)
                         .cornerRadius(30)
                         .padding(.horizontal, 24)
-                    TextField("Phone", text : $phone)
+                    TextField("Phone", text : $viewModel.number)
                         .keyboardType(.numberPad)
                         .font(.subheadline)
                         .padding(12)
@@ -86,7 +83,7 @@ struct SignUpView: View {
             // Secure SignUp Button
             Spacer()
             Button{
-                print("Secure SignUp")
+                Task { try await viewModel.createUser() }
             } label:{
                Text("Secure Sign Up")
                     .font(.subheadline)

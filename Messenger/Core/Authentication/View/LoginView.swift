@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email = ""
-    @State private var password = ""
+    @StateObject var viewModel = LoginViewModel()
+    
     
     var body: some View {
         NavigationStack{
@@ -26,14 +26,14 @@ struct LoginView: View {
                 // Credentials
                 let skyBlue = Color(red: 0.4627, green: 0.8392, blue: 1.0)
                 VStack(spacing: 10){
-                    TextField("Email ID", text: $email)
+                    TextField("Email ID", text: $viewModel.email)
                         .autocapitalization(.none) // Disable autocapitalization to handle it manually
                         .font(.subheadline)
                         .padding(12)
                         .background(Color(skyBlue))
                         .cornerRadius(20)
                         .padding(.horizontal, 24)
-                    SecureField("Password", text: $password)
+                    SecureField("Password", text: $viewModel.password)
                         .autocapitalization(.none)
                         .font(.subheadline)
                         .padding(12)
@@ -58,7 +58,7 @@ struct LoginView: View {
                 
                 //login
                 Button {
-                    print("Handle Login")
+                    Task {try await viewModel.login()}
                 } label: {
                     Text("Secure Login")
                         .font(.subheadline)

@@ -45,6 +45,9 @@
 		CB9639452B6425EB00250578 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CB9639442B6425EB00250578 /* FirebaseStorage */; };
 		CB9639472B6425EB00250578 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CB9639462B6425EB00250578 /* FirebaseStorageCombine-Community */; };
 		CB9639492B64277800250578 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB9639482B64277800250578 /* GoogleService-Info.plist */; };
+		CB96394D2B649A2800250578 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96394C2B649A2800250578 /* LoginViewModel.swift */; };
+		CB96394F2B649A6C00250578 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96394E2B649A6C00250578 /* RegistrationViewModel.swift */; };
+		CB9639512B649A8F00250578 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9639502B649A8F00250578 /* AuthService.swift */; };
 		CBD411162B46FFF300F15F20 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD411152B46FFF300F15F20 /* LoginView.swift */; };
 		CBD9862C2B48B43600013A54 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9862B2B48B43600013A54 /* SignUpView.swift */; };
 		CBE487AB2B5C79FB0016455B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE487AA2B5C79FB0016455B /* User.swift */; };
@@ -69,6 +72,9 @@
 		CB9385432B5C0DB900F6C673 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CB96390F2B64255800250578 /* GoogleService-Info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "GoogleService-Info"; sourceTree = "<group>"; };
 		CB9639482B64277800250578 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CB96394C2B649A2800250578 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CB96394E2B649A6C00250578 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		CB9639502B649A8F00250578 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CBD411152B46FFF300F15F20 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CBD9862B2B48B43600013A54 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		CBE487AA2B5C79FB0016455B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -193,6 +199,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CB96394A2B649A0400250578 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CB9639502B649A8F00250578 /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CB96394B2B649A1000250578 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CB96394C2B649A2800250578 /* LoginViewModel.swift */,
+				CB96394E2B649A6C00250578 /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		CBD4110D2B46FF2500F15F20 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +263,8 @@
 		CBD411122B46FF6200F15F20 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				CB96394B2B649A1000250578 /* ViewModel */,
+				CB96394A2B649A0400250578 /* Service */,
 				CBD411142B46FFE000F15F20 /* View */,
 			);
 			path = Authentication;
@@ -402,15 +427,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB285C922B4AF54400D49E72 /* InboxRowView.swift in Sources */,
+				CB96394F2B649A6C00250578 /* RegistrationViewModel.swift in Sources */,
 				CBFD76602B5846610093A078 /* ProfileView.swift in Sources */,
 				CB00D11F2B4C4C6700B982C2 /* NewMessageView.swift in Sources */,
 				CBD9862C2B48B43600013A54 /* SignUpView.swift in Sources */,
 				CBE931A92B615A5700FEB2E7 /* ChatView.swift in Sources */,
+				CB9639512B649A8F00250578 /* AuthService.swift in Sources */,
 				CBD411162B46FFF300F15F20 /* LoginView.swift in Sources */,
 				CBE931AB2B615DD600FEB2E7 /* ChatMessageCell.swift in Sources */,
 				CBE931AD2B61619800FEB2E7 /* ChatBubble.swift in Sources */,
 				CBE931A62B61563D00FEB2E7 /* CircularProfileImageView.swift in Sources */,
 				CB285C8D2B4AEF5500D49E72 /* InboxView.swift in Sources */,
+				CB96394D2B649A2800250578 /* LoginViewModel.swift in Sources */,
 				CB285C902B4AF1E000D49E72 /* ActiveNowView.swift in Sources */,
 				CB9385442B5C0DB900F6C673 /* ProfileViewModel.swift in Sources */,
 				CBE487AB2B5C79FB0016455B /* User.swift in Sources */,
