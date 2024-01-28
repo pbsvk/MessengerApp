@@ -16,6 +16,8 @@
 		CB2D1FEC2B45E50100B88648 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2D1FEB2B45E50100B88648 /* ContentView.swift */; };
 		CB2D1FEE2B45E50300B88648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2D1FED2B45E50300B88648 /* Assets.xcassets */; };
 		CB2D1FF12B45E50300B88648 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2D1FF02B45E50300B88648 /* Preview Assets.xcassets */; };
+		CB50B4812B66A5FF00610047 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB50B4802B66A5FF00610047 /* UserService.swift */; };
+		CB50B4852B66ACDD00610047 /* InboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB50B4842B66ACDD00610047 /* InboxViewModel.swift */; };
 		CB9385442B5C0DB900F6C673 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9385432B5C0DB900F6C673 /* ProfileViewModel.swift */; };
 		CB9639102B64255800250578 /* GoogleService-Info in Resources */ = {isa = PBXBuildFile; fileRef = CB96390F2B64255800250578 /* GoogleService-Info */; };
 		CB9639132B6425EB00250578 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CB9639122B6425EB00250578 /* FirebaseAnalytics */; };
@@ -71,6 +73,8 @@
 		CB2D1FEB2B45E50100B88648 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB2D1FED2B45E50300B88648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB2D1FF02B45E50300B88648 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CB50B4802B66A5FF00610047 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		CB50B4842B66ACDD00610047 /* InboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewModel.swift; sourceTree = "<group>"; };
 		CB9385432B5C0DB900F6C673 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CB96390F2B64255800250578 /* GoogleService-Info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "GoogleService-Info"; sourceTree = "<group>"; };
 		CB9639482B64277800250578 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -162,8 +166,8 @@
 		CB285C8B2B4AEF2600D49E72 /* Inbox */ = {
 			isa = PBXGroup;
 			children = (
-				CB285C8C2B4AEF5500D49E72 /* InboxView.swift */,
-				CB285C912B4AF54400D49E72 /* InboxRowView.swift */,
+				CB50B4832B66A82A00610047 /* Views */,
+				CB50B4822B66A82800610047 /* ViewModel */,
 			);
 			path = Inbox;
 			sourceTree = "<group>";
@@ -217,10 +221,28 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CB50B4822B66A82800610047 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CB50B4842B66ACDD00610047 /* InboxViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CB50B4832B66A82A00610047 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB285C8C2B4AEF5500D49E72 /* InboxView.swift */,
+				CB285C912B4AF54400D49E72 /* InboxRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CB96394A2B649A0400250578 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				CB9639502B649A8F00250578 /* AuthService.swift */,
+				CB50B4802B66A5FF00610047 /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -446,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB285C922B4AF54400D49E72 /* InboxRowView.swift in Sources */,
+				CB50B4852B66ACDD00610047 /* InboxViewModel.swift in Sources */,
 				CB96394F2B649A6C00250578 /* RegistrationViewModel.swift in Sources */,
 				CBFD76602B5846610093A078 /* ProfileView.swift in Sources */,
 				CB00D11F2B4C4C6700B982C2 /* NewMessageView.swift in Sources */,
@@ -459,6 +482,7 @@
 				CBE931A62B61563D00FEB2E7 /* CircularProfileImageView.swift in Sources */,
 				CB285C8D2B4AEF5500D49E72 /* InboxView.swift in Sources */,
 				CB96394D2B649A2800250578 /* LoginViewModel.swift in Sources */,
+				CB50B4812B66A5FF00610047 /* UserService.swift in Sources */,
 				CB285C902B4AF1E000D49E72 /* ActiveNowView.swift in Sources */,
 				CB9385442B5C0DB900F6C673 /* ProfileViewModel.swift in Sources */,
 				CBE487AB2B5C79FB0016455B /* User.swift in Sources */,
