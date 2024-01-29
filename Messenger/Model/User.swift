@@ -22,5 +22,5 @@ struct User: Codable, Identifiable, Hashable {
 }
 
 extension User {
-    static let TEST_USER = User(fullName: "Skullman", email: "skullerson@gmail.com", profileImageUrl: "profilePic")
+    static let TEST_USER = User(fullName: "Vamsi", email: "skullerson@gmail.com", profileImageUrl: "profilePic")
 }

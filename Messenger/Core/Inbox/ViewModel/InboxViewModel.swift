@@ -16,6 +16,7 @@ class InboxViewModel: ObservableObject {
     init() {
         setupSubscribers()
     }
+    
     private func setupSubscribers() {
         UserService.shared.$currentUser.sink { [weak self] user in
             self?.currentUser = user
