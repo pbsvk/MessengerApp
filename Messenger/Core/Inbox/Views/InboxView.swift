@@ -25,8 +25,8 @@ struct InboxView: View {
             ScrollView{
             ActiveNowView()
                 List {
-                    ForEach(0 ... 10, id : \.self) {
-                        message in InboxRowView()
+                    ForEach(viewModel.recentMessages) {
+                        message in InboxRowView(message: message)
                     }
                 }.listStyle(PlainListStyle())
                     .frame(height: UIScreen.main.bounds.height)
@@ -61,6 +61,7 @@ struct InboxView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         showNewMessageView.toggle()
+                        selectedUser = nil
                     } label: {
                         Image(systemName: "square.and.pencil.circle.fill")
                             .resizable()
