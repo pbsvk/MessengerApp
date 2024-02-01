@@ -17,7 +17,8 @@ class InboxService{
         
         let query = FirestoreConstants
             .MessageCollection
-            .document(uid).collection("recent-messages")
+            .document(uid)
+            .collection("recent-mesages")
             .order(by: "timestamp", descending: true)
         
         query.addSnapshotListener { snapshot, _ in

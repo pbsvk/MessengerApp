@@ -12,10 +12,11 @@ import Firebase
 class InboxViewModel: ObservableObject {
     @Published var currentUser: User?
     
-@Published var recentMessages = [Message]()
+@Published var recentMesages = [Message]()
     
     private var cancellables = Set<AnyCancellable>()
     private let service = InboxService()
+    
     init() {
         setupSubscribers()
         service.observeRecentMessages()
@@ -25,7 +26,9 @@ class InboxViewModel: ObservableObject {
         UserService.shared.$currentUser.sink { [weak self] user in
             self?.currentUser = user
         }.store(in: &cancellables)
-       service.$documentChanges.sink{ [weak self] changes in
+       
+        
+        service.$documentChanges.sink{ [weak self] changes in
             self?.loadInitialMessages(fromChanges: changes)
         }.store(in: &cancellables)
     }
@@ -37,7 +40,7 @@ class InboxViewModel: ObservableObject {
             
             UserService.fetchUser(withUid: message.chatPartnerId) { user in
                 messages[i].user = user
-                self.recentMessages.append(messages[i])
+                self.recentMesages.append(messages[i])
             }
         }
         
