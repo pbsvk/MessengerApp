@@ -47,9 +47,15 @@ struct InboxView: View {
                 if let user = message.user {
                     ChatView(user: user)
                 }})
-            .navigationDestination(for: User.self, destination: {user in
+            .navigationDestination(for: Route.self, destination: {route
+                in
                 
-                ProfileView( user: user)
+                switch route {
+                case .profile(let user):
+                    ProfileView(user: user)
+                case .chatView(let user):
+                    ChatView(user: user)
+                }
             })
             
             .navigationDestination(isPresented: $showChat, destination:{ if let user = selectedUser{
@@ -63,8 +69,10 @@ struct InboxView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     HStack {
-                        NavigationLink(value: user){
-                            CircularProfileImageView(user: user, size:.small)
+                        if let user {
+                            NavigationLink(value: Route.profile(user)){
+                                CircularProfileImageView(user: user, size:.small)
+                            }
                         }
                         Text("Chats")
                             .font(.title)
