@@ -17,30 +17,7 @@ struct ProfileView: View {
             // header
             VStack {
                 PhotosPicker(selection: $viewModel.selectedItem) {
-                    if let profileImage = viewModel.profileImage {
-                        profileImage
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 80, height: 80)
-                            .clipShape(Circle())
-                    } else {
-                        if let imageUrl = user.profileImageUrl,
-                           let url = URL(string: imageUrl),
-                           let data = try? Data(contentsOf: url),
-                           let uiImage = UIImage(data: data) {
-                            Image(uiImage: uiImage)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 80, height: 80)
-                                .clipShape(Circle())
-                        } else {
-                            Image(user.profileImageUrl ?? "")
-                                                       .resizable()
-                                                       .scaledToFill()
-                                                       .frame(width: 80, height: 80)
-                                                       .clipShape(Circle())
-                        }
-                    }
+                    ProfileImageView(viewModel: viewModel, user: user)
                 }
                 
                 Text(user.fullName)
@@ -73,6 +50,38 @@ struct ProfileView: View {
                 }
             }
             
+        }
+    }
+}
+@MainActor
+struct ProfileImageView: View {
+    @ObservedObject var viewModel: ProfileViewModel
+    let user: User
+    
+    var body: some View {
+        if let profileImage = viewModel.profileImage {
+            profileImage
+                .resizable()
+                .scaledToFill()
+                .frame(width: 80, height: 80)
+                .clipShape(Circle())
+        } else {
+            if let imageUrl = user.profileImageUrl,
+               let url = URL(string: imageUrl),
+               let data = try? Data(contentsOf: url),
+               let uiImage = UIImage(data: data) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 80, height: 80)
+                    .clipShape(Circle())
+            } else {
+                Image(user.profileImageUrl ?? "")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 80, height: 80)
+                    .clipShape(Circle())
+            }
         }
     }
 }

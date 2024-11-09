@@ -40,9 +40,9 @@ struct InboxView: View {
                 }.listStyle(PlainListStyle())
                    
             
-            .onChange(of: selectedUser, perform:{newValue in
-            showChat = newValue != nil
-            })
+                .onChange(of: selectedUser) { oldValue, newValue in
+                                showChat = newValue != nil
+            }
             .navigationDestination(for: Message.self, destination: {message in
                 if let user = message.user {
                     ChatView(user: user)

@@ -57,10 +57,10 @@
 		CB9639432B6425EB00250578 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CB9639422B6425EB00250578 /* FirebaseRemoteConfigSwift */; };
 		CB9639452B6425EB00250578 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CB9639442B6425EB00250578 /* FirebaseStorage */; };
 		CB9639472B6425EB00250578 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CB9639462B6425EB00250578 /* FirebaseStorageCombine-Community */; };
-		CB9639492B64277800250578 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB9639482B64277800250578 /* GoogleService-Info.plist */; };
 		CB96394D2B649A2800250578 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96394C2B649A2800250578 /* LoginViewModel.swift */; };
 		CB96394F2B649A6C00250578 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96394E2B649A6C00250578 /* RegistrationViewModel.swift */; };
 		CB9639512B649A8F00250578 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9639502B649A8F00250578 /* AuthService.swift */; };
+		CBBD56FC2CB17D62000516CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBBD56FB2CB17D62000516CE /* GoogleService-Info.plist */; };
 		CBD411162B46FFF300F15F20 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD411152B46FFF300F15F20 /* LoginView.swift */; };
 		CBD9862C2B48B43600013A54 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9862B2B48B43600013A54 /* SignUpView.swift */; };
 		CBE487AB2B5C79FB0016455B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE487AA2B5C79FB0016455B /* User.swift */; };
@@ -97,10 +97,10 @@
 		CB50B4842B66ACDD00610047 /* InboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewModel.swift; sourceTree = "<group>"; };
 		CB9385432B5C0DB900F6C673 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CB96390F2B64255800250578 /* GoogleService-Info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "GoogleService-Info"; sourceTree = "<group>"; };
-		CB9639482B64277800250578 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB96394C2B649A2800250578 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CB96394E2B649A6C00250578 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		CB9639502B649A8F00250578 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		CBBD56FB2CB17D62000516CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CBD411152B46FFF300F15F20 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CBD9862B2B48B43600013A54 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		CBE487AA2B5C79FB0016455B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -289,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				CB2D1FE82B45E50100B88648 /* Messenger */,
+				CBBD56FD2CB17FD2000516CE /* Frameworks */,
 				CB2D1FE72B45E50100B88648 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -310,8 +311,6 @@
 				CBD4110E2B46FF3200F15F20 /* Core */,
 				CBD411112B46FF4C00F15F20 /* Extensions */,
 				CBD411102B46FF4300F15F20 /* Service */,
-				CB96390F2B64255800250578 /* GoogleService-Info */,
-				CB9639482B64277800250578 /* GoogleService-Info.plist */,
 				CBD411132B46FFB600F15F20 /* Root */,
 				CBD4110F2B46FF3800F15F20 /* Model */,
 				CB2D1FED2B45E50300B88648 /* Assets.xcassets */,
@@ -364,6 +363,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		CBBD56FD2CB17FD2000516CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CBD4110D2B46FF2500F15F20 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +404,8 @@
 		CBD411102B46FF4300F15F20 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				CB96390F2B64255800250578 /* GoogleService-Info */,
+				CBBD56FB2CB17D62000516CE /* GoogleService-Info.plist */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -564,7 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB2D1FF12B45E50300B88648 /* Preview Assets.xcassets in Resources */,
-				CB9639492B64277800250578 /* GoogleService-Info.plist in Resources */,
+				CBBD56FC2CB17D62000516CE /* GoogleService-Info.plist in Resources */,
 				CB2D1FEE2B45E50300B88648 /* Assets.xcassets in Resources */,
 				CB9639102B64255800250578 /* GoogleService-Info in Resources */,
 			);
