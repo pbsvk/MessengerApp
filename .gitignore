@@ -48,6 +48,7 @@ playground.xcworkspace
 # Carthage/Checkouts
 
 Carthage/Build/
+GoogleService-Info.plist
 
 # fastlane
 #
